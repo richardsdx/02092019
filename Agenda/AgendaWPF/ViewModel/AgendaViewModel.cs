@@ -30,7 +30,7 @@ namespace AgendaWPF.ViewModel
         {
             context = new ModelAgenda();
             this.Contatos = new ObservableCollection<Contato>(context.Contatos.ToList());
-            this.PessoaSelecionada = context.Pessoas.FirstOrDefault();
+            this.ContatoSelecionado = context.Contatos.FirstOrDefault();
 
         }
         public void Salvar()
@@ -40,20 +40,20 @@ namespace AgendaWPF.ViewModel
 
         public void Remover()
         {
-            this.Pessoas.Remove(this.PessoaSelecionada);
-            if (this.PessoaSelecionada.Id != 0)
+            this.Contatos.Remove(this.ContatoSelecionado);
+            if (this.ContatoSelecionado.Id != 0)
             {
-                this.context.Pessoas.Remove(this.PessoaSelecionada);
+                this.context.Contatos.Remove(this.ContatoSelecionado);
             }
 
         }
 
         public void Adicionar()
         {
-            Pessoa p = new Pessoa();
-            this.Pessoas.Add(p);
-            this.context.Pessoas.Add(p);
-            this.PessoaSelecionada = p;
+            Contato p = new Contato();
+            this.Contatos.Add(p);
+            this.context.Contatos.Add(p);
+            this.ContatoSelecionado = p;
 
         }
     }
