@@ -1,23 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Agenda
 {
-    [Table=("Compromisso")]
+    [Table("Compromisso")]
     public class Compromisso
     {
 
         public int Id { get; set; }
 
         [Required]
-        [MinLenght(5)]
-        [MaxLenght(200)]
+        [MinLength(5)]
+        [MaxLength(200)]
         public String Titulo { get; set; }
 
-        [MaxLenght(500)]
+        [MaxLength(500)]
         public String Local { get; set; }
 
         [Required]
