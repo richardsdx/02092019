@@ -8,5 +8,80 @@
         Title="WindowContato" Height="450" Width="800">
     <Grid>
         
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition/>
+
+        </Grid.ColumnDefinitions>
+
+        <ListView Grid.ColumnSpan="2" ItemsSource="{Binding Path=AgendaViewModel.Contatos}"
+                  DisplayMemberPath="Nome"
+                  SelectedItem="{Binding Path=AgendaViewModel.ContatoSelecionado}"/>
+
+
+        <TextBox Grid.Row="1" Grid.Column="0">Nome</TextBox>
+        <TextBox Grid.Row="2" Grid.Column="0">Sobrenome</TextBox>
+        <TextBox Grid.Row="3" Grid.Column="0">Data de Nascimento</TextBox>
+        <TextBox Grid.Row="4" Grid.Column="0">Telefone</TextBox>
+        <TextBox Grid.Row="5" Grid.Column="0">Compromissos</TextBox>
+        
+        <DatePicker Grid.Row="3" Grid.Column="2"/>
+
+        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Path=AgendaViewModel.ContatoSelecionado.Nome}"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding Path=AgendaViewModel.ContatoSelecionado.Sobrenome}"/>
+        <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding Path=AgendaViewModel.ContatoSelecionado.Telefone}"/>
+        <TextBox Grid.Row="5" Grid.Column="1" Text="{Binding Path=AgendaViewModel.ContatoSelecionado.Compromissos}"/>
+
+        <ListView Grid.ColumnSpan="2" ItemsSource="{Binding Path=AgendaViewModel.Compromisso}"
+                  DisplayMemberPath="Nome"
+                  SelectedItem="{Binding Path=AgendaViewModel.CompromissoSelecionado}"/>
+
+        <Button    
+            x:Name="OkButton"
+            Click="OkButton_Click"
+            Grid.Row="8" Grid.Column="0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Margin="10,10,10,10"
+                    Width="75">Salvar</Button>
+        <Button 
+            x:Name="CancelarButton"
+            Click="CancelarButton_Click"
+            HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Margin="10,10,10,10"
+                    Width="75"
+            Grid.Row="8" Grid.Column="1">Cancelar</Button>
+
+        <Button x:Name="RemoverButton" 
+Click="RemoverButton_Click"
+                Grid.Column="0"
+                Grid.Row="0"
+                HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    Margin="10,10,10,10"
+                    Width="75">Remover</Button>
+
+        <Button x:Name="AdicionarButton"
+                Click="AdicionarButton_Click"
+                Grid.Column="0"
+                Grid.Row="0"
+                HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    Margin="10,10,10,10"
+                    Width="75">Adicionar</Button>
+
     </Grid>
 </Window>

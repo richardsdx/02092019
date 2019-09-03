@@ -34,12 +34,13 @@ namespace AgendaWPF
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
+            WindowCompromissos wp = new WindowCompromissos();
+            wp.Show();
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
     }
 }

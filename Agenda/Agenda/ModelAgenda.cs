@@ -1,6 +1,5 @@
 namespace Agenda
 {
-    using Microsoft.EntityFrameworkCore;
     using System;
     using System.Data.Entity;
     using System.Linq;

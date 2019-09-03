@@ -9,7 +9,7 @@
     <StackPanel>
 
         <Button Click="Button_Click">Contatos</Button>
-        <Button Click="Button_Click_1">Compromissis</Button>
+        <Button Click="Button_Click_1">Compromissos</Button>
         <Button Click="Button_Click_2">Finalizar aplicação</Button>
         
     </StackPanel>

@@ -14,7 +14,6 @@ namespace Agenda
 
         public int Id { get; set; }
 
-        [Required]
         [MinLength(5)]
         [MaxLength(200)]
         public String Titulo { get; set; }
@@ -22,7 +21,6 @@ namespace Agenda
         [MaxLength(500)]
         public String Local { get; set; }
 
-        [Required]
         public DateTime DataInicio { get; set; }
 
         public DateTime DataFim { get; set;  }

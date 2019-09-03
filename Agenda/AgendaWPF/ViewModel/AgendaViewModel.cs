@@ -23,6 +23,7 @@ namespace AgendaWPF.ViewModel
 
 
         public Contato ContatoSelecionado { get; set; }
+        public Compromisso CompromissoSelecionado { get; set; }
 
         private ModelAgenda context { get; set; }
 
@@ -57,5 +58,4 @@ namespace AgendaWPF.ViewModel
 
         }
     }
-}
 }
